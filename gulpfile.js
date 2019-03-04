@@ -12,38 +12,38 @@ var gulp = require('gulp'),
 
 var paths = {
   dirs: {
-    build: './build'
+    assets: './assets'
   },
   html: {
     src: './src/pages/*.pug',
-    dest: './build',
+    dest: './assets',
     watch: ['./src/pages/*.pug', './src/templates/*.pug', './src/blocks/**/*.pug']
   },
   css: {
     src: './src/styles/style.scss',
-    dest: './build/css',
+    dest: './assets/css',
     watch: ['./src/blocks/**/*.scss', './src/styles/**/*.scss', './src/styles/*.scss']
   },
   js: {
     src: ['./node_modules/jquery/dist/jquery.min.js', './src/plugins/*.js', './src/blocks/**/*.js'],
-    dest: './build/js',
+    dest: './assets/js',
     watch: './src/blocks/**/*.js',
     watchPlugins: './src/scripts/plugins/*.js'
   },
   images: {
     src: './src/blocks/**/img/*',
-    dest: './build/img',
+    dest: './assets/img',
     watch: ['./src/blocks/**/img/*']
   },
   fonts: {
     src: './src/fonts/*',
-    dest: './build/fonts',
+    dest: './assets/fonts',
     watch: './src/fonts/*'
   }
 };
 
 gulp.task('clean', function () {
-  return del(paths.dirs.build);
+  return del(paths.dirs.assets);
 });
 
 gulp.task('templates', function () {
@@ -100,7 +100,7 @@ gulp.task('fonts', function () {
 gulp.task('server', function () {
   browserSync.init({
     server: {
-      baseDir: paths.dirs.build
+      baseDir: paths.dirs.assets
     },
     reloadOnRestart: true,
     tunnel: 'remote'
