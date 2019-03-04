@@ -1,0 +1,8 @@
+mixin header(modifier)
+  .header&attributes(attributes)
+    .container
+      .row
+        .col-12
+          .header__content.d-flex.justify-content-between.align-items-baseline
+            +logo
+            a.button(href="#") Кнопка

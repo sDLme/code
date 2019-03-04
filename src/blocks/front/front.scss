@@ -1,0 +1,23 @@
+.front {
+
+
+  &:after {
+
+  }
+
+  @include media-breakpoint-down(md) {
+
+  }
+  
+  &__content {
+
+  }
+  
+  &__dscr {
+
+
+    @include media-breakpoint-down(xs) {
+
+    }
+  }
+}

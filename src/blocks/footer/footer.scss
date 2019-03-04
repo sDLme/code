@@ -1,0 +1,24 @@
+.footer {
+
+
+  &__top {
+
+  }
+
+  &__link {
+
+
+    @include media-breakpoint-down(xs) {
+
+    }
+
+  }
+
+  &__copyright {
+
+
+    @include media-breakpoint-down(xs) {
+
+    }
+  }
+}
